@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConventor(this.value)"
+        onchange="temperatureConventor(this.value)"
+    </p>
+    <p>
+        Fahrenheit: <Span id="OutputFahrenheit"></Span>
+    </p>
+    <script>
+        function temperatureConventor(Val) {
+        Val=parseFloat(Val);
+        document.getElementById("OutputFahrenheit").innerHTML=(Val-32)/1.8;
+        }
+    </script>
+</body>
+</html>
